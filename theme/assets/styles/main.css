@@ -7,7 +7,7 @@
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
-
+@plugin "daisyui" { themes: light --default; }
 
 @utility container {
   @apply w-full mx-auto px-4 md:px-5;

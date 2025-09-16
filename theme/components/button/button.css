@@ -2,22 +2,11 @@
 @import "../../assets/styles/tokens.css";
 
 @layer base {
-  button,
-  [role="button"] {
-    @apply cursor-pointer;
-  }
+  @apply text-base rounded-full py-6 px-8 border-0 shadow-none
+  font-medium text-shadow-none transition-colors;
 }
 
-.c-button {
-  @apply inline-flex items-center text-base font-sans leading-4 rounded-full
-        transition-colors duration-150 ease-in-out shadow-none
-        py-[14px] px-8 border-0;
-
-  /* child paths transition */
-  svg path { @apply transition-colors duration-150 ease-in-out; }
-}
-
-.c-button--primary {
+@utility btn-primary {
   @apply bg-oxford text-white;
 
   &:hover {
@@ -25,7 +14,7 @@
   }
 
   .block--hero.bg-rich & {
-  @apply bg-platinum text-rich;
+    @apply bg-platinum text-rich;
 
     &:hover {
       @apply bg-yinmn text-platinum;
@@ -41,7 +30,7 @@
   }
 }
 
-.c-button--secondary {
+@utility btn-secondary {
   @apply bg-transparent border-2 border-oxford text-oxford;
 
   &:hover {
