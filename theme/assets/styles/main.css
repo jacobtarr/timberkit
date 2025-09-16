@@ -7,7 +7,7 @@
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
-@plugin "daisyui" { themes: light --default; }
+
 
 @utility container {
   @apply w-full mx-auto px-4 md:px-5;
@@ -21,9 +21,3 @@
   /* 2xl (≥1536px) */
   @media (min-width: 1536px) { max-width: var(--container-2xl); }
 }
-
-/* Foundations */
-@import "../../components/heading/heading.css";
-
-/* Components */
-@import "../../components/button/button.css";

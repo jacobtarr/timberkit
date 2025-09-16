@@ -9,7 +9,7 @@
 {% set imgRight  = (fields.layout_media_position ?? 'right') == 'right' %}
 
 {# flip columns if image should be on the left #}
-{% set contentCol = 'col-span-2 md:col-span-1 ' ~ (imgRight ? '' : 'md:order-2') %}
+{% set contentCol = 'col-span-2 text-center md:col-span-1 md:text-left ' ~ (imgRight ? '' : 'md:order-2') %}
 {% set mediaCol   = 'col-span-2 md:col-span-1 ' ~ (imgRight ? '' : 'md:order-1') %}
 
 {% block block_content %}
@@ -52,7 +52,7 @@
         </div>
         
         {% if (primary_button and primary_button.title) or (secondary_button and secondary_button.title) %}
-          <div class="flex flex-wrap gap-4">
+          <div class="flex flex-wrap justify-center md:justify-start gap-4">
 
             {# Primary CTA #}
             {% if primary_button and primary_button.url and primary_button.title %}

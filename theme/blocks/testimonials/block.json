@@ -1,0 +1,24 @@
+{
+  "apiVersion": 2,
+  "name": "acf/testimonials",
+  "title": "Testimonials",
+  "description": "Section with heading, intro text, call-to-action, and customer testimonials (quote, author, role, avatar).",
+  "category": "custom",
+  "icon": "format-quote",
+  "keywords": ["testimonials", "quotes", "reviews", "feedback"],
+  "supports": {
+    "align": ["full", "wide"],
+    "anchor": true,
+    "jsx": false
+  },
+  "acf": {
+    "mode": "preview",
+    "renderCallback": "acf_block_render_callback"
+  },
+  "example": {
+    "attributes": {
+      "mode": "preview",
+      "data": { "is_preview": true }
+    }
+  }
+}

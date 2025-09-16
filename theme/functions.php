@@ -2,7 +2,7 @@
 /**
  * @package WordPress
  * @subpackage Timberkit
- * @since Timberkit 1.0.0
+ * @since Timberkit 2.2.0
  */
 
 require_once dirname( __DIR__ ) . '/vendor/autoload.php';

@@ -7,13 +7,13 @@
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
-@plugin "daisyui" { themes: light --default; }
+@import "../../components/button/button.css";
 
 body {
   @apply font-sans;
 }
 
-.wp-block{
+.wp-block {
   @apply max-w-(--breakpoint-xl);
 }
 
@@ -42,6 +42,8 @@ h1.wp-block-post-title {
 .editor-styles-wrapper .bg-oxford { background-color: var(--color-oxford); }
 .editor-styles-wrapper .bg-yinmn  { background-color: var(--color-yinmn); }
 
+.editor-styles-wrapper .text-rich { color: var(--color-rich); }
+.editor-styles-wrapper .text-oxford { color: var(--color-oxford); }
 .editor-styles-wrapper .text-yinmn { color: var(--color-yinmn); }
 .editor-styles-wrapper .text-silver { color: var(--color-silver); }
 

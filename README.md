@@ -54,7 +54,7 @@ theme/
 ```
 
 ## 🙌 Attribution
-Inspired by `cearls/timberland` (MIT). View their full repo [here](https://github.com/cearls/timberland).
+Inspired by `cearls/timberkit` (MIT). View their full repo [here](https://github.com/cearls/timberkit).
 
 ## 📄 License
 MIT © Jacob Tarr

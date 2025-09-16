@@ -1,2 +1,59 @@
 @reference "tailwindcss";
+@import "../../assets/styles/tokens.css";
 
+@layer base {
+  button,
+  [role="button"] {
+    @apply cursor-pointer;
+  }
+}
+
+.c-button {
+  @apply inline-flex items-center text-base font-sans leading-4 rounded-full
+        transition-colors duration-150 ease-in-out shadow-none
+        py-[14px] px-8 border-0;
+
+  /* child paths transition */
+  svg path { @apply transition-colors duration-150 ease-in-out; }
+}
+
+.c-button--primary {
+  @apply bg-oxford text-white;
+
+  &:hover {
+    @apply bg-yinmn text-gray-100;
+  }
+
+  .block--hero.bg-rich & {
+  @apply bg-platinum text-rich;
+
+    &:hover {
+      @apply bg-yinmn text-platinum;
+    }
+  }
+
+  .block--hero.bg-yinmn & {
+    @apply bg-oxford text-platinum;
+
+    &:hover {
+      @apply bg-platinum text-rich;
+    }
+  }
+}
+
+.c-button--secondary {
+  @apply bg-transparent border-2 border-oxford text-oxford;
+
+  &:hover {
+    @apply bg-yinmn border-yinmn text-gray-100;
+  }
+
+  .block--hero.bg-rich &,
+  .block--hero.bg-yinmn & {
+    @apply border-platinum text-platinum;
+
+    &:hover {
+      @apply bg-platinum text-rich;
+    }
+  }
+}
