@@ -1,14 +1,14 @@
 # TimberKit 🚀
-A lean WordPress starter theme with [Timber](https://timber.github.io/docs/v2/) (Twig), [ACF Pro Blocks](https://www.advancedcustomfields.com/resources/blocks/), [Vite](https://vite.dev/), [Tailwind v4.0](https://tailwindcss.com/), [Daisy UI](https://daisyui.com/) and [Alpine.js](https://alpinejs.dev/). Includes a shared base block wrapper, small component partials, an inline-SVG helper, and practical editor CSS so Gutenberg previews look right.
+A lean WordPress starter theme with [Timber](https://timber.github.io/docs/v2/) (Twig), [ACF Pro Blocks](https://www.advancedcustomfields.com/resources/blocks/), [Vite](https://vite.dev/), [Tailwind v4.0](https://tailwindcss.com/), and [Alpine.js](https://alpinejs.dev/). Includes a shared base block wrapper, small component partials, an inline-SVG helper, and practical editor CSS so Gutenberg previews look right.
 
 ## 🧱 Stack
 
-Timber • ACF Pro Blocks • Vite • Tailwind v4 • DaisyUI • Alpine.js
+Timber • ACF Pro Blocks • Vite • Tailwind v4 • Alpine.js
 
 ## ✨ Highlights
 - ⚡ Vite dev server + hashed production assets
 - 🧱 Shared block base: ACF blocks extend one wrapper for consistent section layout + appearance controls
-- 🎨 Tailwind v4 + DaisyUI (theme: light) + Typography plugin for rich text
+- 🎨 Tailwind v4 + Typography plugin for rich text
 - 🧩 Small component library (Heading, Rich Text, Button) with “expects” notes
 - 🖼️ Safe inline SVG helper (optional monochrome via `currentColor`)
 - 🧭 Primary/Footer menus + Theme Settings (ACF Options) in Twig context
