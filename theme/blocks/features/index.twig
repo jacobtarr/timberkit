@@ -29,48 +29,49 @@
 {% set featureCardClass = cardVariant.card %}
 {% set featureCardIconClass = cardVariant.icon %}
 
-  <div class="text-center space-y-12">
+  <div class="text-center space-y-8 md:space-y-12">
     {% if block_title or block_body %}
       <div class="space-y-3 max-w-3xl mx-auto">
-        {% if block_title %}
-          {% include 'components/heading/heading.twig' with {
-            heading: {
-							tag: 'h2',
-							text: block_title,
-							classes: blockHeadingClass,
-						}
-          } %}
-        {% endif %}
-        {% if block_body %}
-          {% include 'components/rich-text/rich-text.twig' with {
-            richText: {
-              content: block_body,
-              classes: blockBodyClass ~ ' mx-auto',
-              sanitize: true
-            }
-          } %}
-        {% endif %}
+        {% include 'components/heading/heading.twig' with {
+          heading: {
+            tag: 'h2',
+            text: block_title,
+            classes: blockHeadingClass,
+          }
+        } %}
+        {% include 'components/rich-text/rich-text.twig' with {
+          richText: {
+            content: block_body,
+            classes: blockBodyClass ~ ' mx-auto',
+            sanitize: true
+          }
+        } %}
       </div>
     {% endif %}
     {% if items %}
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto">
         {% for item in items %}
-          <div class="text-center flex flex-col items-center gap-4 rounded-xl p-6 md:p-8 {{ featureCardClass }}">
+          <div class="h-full text-center flex flex-col items-center gap-4 rounded-xl p-6 md:p-8 {{ featureCardClass }}">
             {% set icon = item.icon ?? null %}
             {% if icon %}
-              <div class="p-3 rounded-full text-white {{ featureCardIconClass }}">
-                <img
+              <figure class="w-12 h-12 p-3 rounded-full flex items-center justify-center {{ featureCardIconClass }}">
+                {% if icon.subtype == 'svg+xml' %}
+                  {{ inline_svg(icon, { class:'w-8 h-8', title:'' }) }}
+                {% else %}
+                  <img
+                  width="32" height="32"
                   src="{{ icon.url }}"
                   alt="{{ icon.alt|default('') }}"
                   class="w-8 h-8 object-contain"
                   loading="lazy">
-              </div>
+                {% endif %}
+              </figure>
             {% endif %}
 						{% include 'components/heading/heading.twig' with {
 							heading: {
-								tag: 'h4',
+								tag: 'h3',
 								text: item.title,
-								classes: 'text-platinum',
+								classes: 'c-heading--h4 text-platinum',
 							}
 						} %}
 						{% include 'components/rich-text/rich-text.twig' with {

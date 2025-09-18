@@ -21,6 +21,7 @@
     "sass": "^1.91.0",
     "tailwindcss": "^4.1.8",
     "vite": "^6.3.5",
+    "vite-plugin-compression": "^0.5.1",
     "vite-plugin-full-reload": "^1.2.0"
   }
 }

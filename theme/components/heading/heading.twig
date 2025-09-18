@@ -27,7 +27,7 @@
 {% set attrs = heading.attrs ?? {} %}
 
 {% if heading.text %}
-  <{{ headingTag }} class="o-heading{{ underlineClass }}{{ additionalClasses }}"
+  <{{ headingTag }} class="c-heading{{ underlineClass }}{{ additionalClasses }}"
     {% for key, value in attrs %}
       {{ key }}="{{ value is iterable ? value|join(',') : value }}"
     {% endfor %}

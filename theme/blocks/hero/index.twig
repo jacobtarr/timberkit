@@ -92,21 +92,24 @@
 
     <div class="{{ mediaCol }}">
       {% if img and img.url %}
-        <figure class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl">
-          <img
-            class="block w-full h-auto object-cover"
-            src="{{ img.sizes['large'] ?? img.url }}"
-            srcset="
-              {{ img.sizes['medium_large'] ?? '' }} 768w,
-              {{ img.sizes['large'] ?? '' }} 1024w,
-              {{ img.url }} {{ img.width }}w"
-            sizes="(min-width: 768px) 50vw, 100vw"
-            width="{{ img.width }}"
-            height="{{ img.height }}"
-            alt="{{ img.alt ?: img.title }}"
-            loading="lazy"
-            decoding="async"
-          >
+        <figure class="w-full h-auto overflow-hidden rounded-md shadow-xl sm:rounded-xl"
+        style="aspect-ratio: '{{ img.width }}/{{ img.height }}'">
+          <picture>
+            <img
+              src="{{ img.sizes['large'] ?? img.url }}"
+              srcset="
+                {{ img.sizes['medium_large'] ?? '' }} 768w,
+                {{ img.sizes['large'] ?? '' }} 1024w,
+                {{ img.url }} {{ img.width }}w"
+              sizes="(min-width: 768px) 50vw, 100vw"
+              width="{{ img.width }}"
+              height="{{ img.height }}"
+              alt="{{ img.alt ?: img.title }}"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            >
+          </picture>
         </figure>
       {% endif %}
     </div>

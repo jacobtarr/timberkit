@@ -7,8 +7,6 @@
 @import "tailwindcss";
 
 @plugin "@tailwindcss/typography";
-@plugin "daisyui" { themes: light --default; }
-@import "../../components/button/button.css";
 
 body {
   @apply font-sans;
@@ -54,3 +52,12 @@ h1.wp-block-post-title {
 
 .editor-styles-wrapper .fill-current { fill: currentColor; }
 .editor-styles-wrapper .object-contain { object-fit: contain; }
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  margin: inherit !important;
+}

@@ -103,7 +103,7 @@ class Timberkit extends Timber\Site {
 		if ( file_exists( get_template_directory() . '/../config.json' ) ) {
 			$config   = json_decode( file_get_contents( get_template_directory() . '/../config.json' ), true );
 			$vite_env = $config['vite']['environment'] ?? 'production';
-		}
+		} 
 
 		$dist_uri  = get_template_directory_uri() . '/assets/dist';
 		$dist_path = get_template_directory() . '/assets/dist';
@@ -130,7 +130,7 @@ class Timberkit extends Timber\Site {
 					)
 				);
 
-				// wp_enqueue_style('prefix-editor-font', '//fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+				wp_enqueue_style('prefix-editor-font', '//fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
 				$editor_css_file = 'theme/assets/styles/editor-style.css';
 				add_editor_style( $dist_uri . '/' . $manifest[ $editor_css_file ]['file'] );
 			}
